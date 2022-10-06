@@ -1,0 +1,58 @@
+body {
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+}
+.tilting-card-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  position: relative;
+  border: 3px solid lime;
+  /* padding: 2rem; */
+}
+.tilting-card-content {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: 1/-1;
+  place-content: center;
+  text-align: center;
+  padding: 2rem;
+  aspect-ratio: 1/2;
+}
+.mouse-position-tracker {
+  position: absolute;
+  background: blue;
+  opacity: 0.2;
+  inset: 0;
+}
+
+/* 3rd 6th and 9th  */
+.mouse-position-tracker:nth-of-type(3n) {
+  background: red;
+  grid-column: 3/4;
+}
+
+/* 2nd 5th and 8th  */
+.mouse-position-tracker:nth-of-type(3n-1) {
+  background: green;
+  grid-column: 2/3;
+}
+
+/* 1nd 4th and 7th  */
+.mouse-position-tracker:nth-of-type(3n-2) {
+  background: yellow;
+  grid-column: 1/2;
+}
+
+/* 4-6 */
+.mouse-position-tracker:nth-child(-n + 6) {
+  background: purple;
+  grid-row: 2/3;
+}
+
+/* 7-9 */
+.mouse-position-tracker:nth-child(-n + 6) {
+  background: crimson;
+  grid-row: 3/4;
+}
