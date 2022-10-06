@@ -1,0 +1,17 @@
+body {
+  margin: 100px;
+  box-sizing: border-box;
+}
+.box {
+  width: 300px;
+  height: 300px;
+  background: #3dccc7;
+  transition-duration: 2000ms;
+  transition-property: transform;
+  transition-timing-function: ease-in-out;
+}
+
+.box:hover {
+  background: #ff6b6b;
+  transform: rotate(45deg);
+}
